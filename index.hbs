@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{htmlWebpackPlugin.options.title}}</title>
+    <script src="https://vk.com/js/api/openapi.js?159" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="friends-container">
+        {{> './src/templates/friends-templates.hbs'}}
+        <div id="friends-container-left">
+            <ul class="list-friends-left"></ul>
+            </ul>
+        </div>
+        <div id="friends-container-rigth">
+            <ul class="list-friends-rigth"></ul>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
