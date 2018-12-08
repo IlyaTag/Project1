@@ -1,22 +1,226 @@
-#friends-container{
-    margin:auto;
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,600,600i,700,700i');
+
+body,
+ul,
+div,
+li,
+img,
+input {
+    padding: 0;
+    margin: 0;
+}     
+    
+body{
+    background-color: #999999;
 }
 
-#friends-container-left, #friends-container-rigth{
-    min-width: 500px;
-    min-height: 500px;
-    width:500px;
-    height: 500px;
-    overflow-y: auto;
+ul{
+    list-style:none;
 }
+#friends-container {
+    min-width: 620px;
+    width: 620px;
+    margin: auto;
+    margin-top: 9%;
+}
+
+#friend-img {
+    margin-left: 40%;
+    margin-bottom: 21px;
+}
+
+.head {
+    min-width: 620px;
+    width: 620px;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #ff8663;
+    height: 45px;
+}
+
+.head-left, .head-right {
+    position: inherit;
+    display: inline-block;
+    min-width: 48%;
+}
+
+.divheight{
+    height: inherit;
+    display: inline-block;
+}
+
+.head-left {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding-left: 14px;
+    color: #fff;
+    vertical-align: 100%;
+    
+}
+
+.head-right {
+    text-align: right;
+}
+
+.head-right .fa-times{
+    font-size: 17px;
+    color:#fff;
+}
+
+.input {
+    position: relative;
+    min-width: 620px;
+    width: 620px;
+    height: 45px;
+    background-color: #f0f0f0;
+    
+}
+
+.input-left,
+.input-right {
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 7px;
+    padding-left:7px;
+    position: inherit;
+    display: inline-block;
+    min-width: 48%;
+}
+
+.input-left .fa-search, .input-right .fa-search {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+}
+
+input[type=text] {
+    width: 285px;
+	height: 26px;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+    border-radius: 13px;
+    box-sizing: border-box;
+    padding-left: 28px;
+    border: 1px solid white;
+    background-color: #fff;
+    font-family: 'Fira Sans';
+    font-weight:300;
+	font-size: 12px;
+    color: #9f9f9f;
+    outline: none;
+}
+
+#friends-container-left,
+#friends-container-right {
+    box-sizing: border-box;
+    min-width: 310px;
+    width: 310px;
+    min-height: 324px;
+    height: 324px;
+    overflow-x:hidden;
+    overflow-y: auto;
+    list-style-type: none;
+    background-color: #fff;
+}
+
 #friends-container-left {
     float: left;
 }
-ul{
-    list-style-type: none;
+
+.friends-items-left {
+    display: inline-block;
+    min-width: 78%;
+    width: 78%;
 }
 
-.friend-name{
-    vertical-align: 100%;
+.friends-items-right {
     display: inline-block;
+    min-width: 19%;
+    width: 19%;
+    text-align: right;
+}
+
+.fr-Text{
+    height: 30px;
+    min-width: 279px;
+    width: 279px;
+    font-family: 'Fira Sans';
+    font-size: 12px;
+    font-weight:500;
+    color: #4f4f4f;
+    box-sizing: border-box;
+    padding-top: 10px;
+    margin-left: 15px;
+    vertical-align: top;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.friends-items{
+    min-width: 279px;
+    width: 279px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-left: 15px;
+
+}
+
+.friends-items-left img{
+    width: auto;
+    max-width: 100%;
+	-webkit-border-radius: 22px 23px 23px 22px/23px 23px 22px 22px;
+	-moz-border-radius: 22px 23px 23px 22px/23px 23px 22px 22px;
+	border-radius: 22px 23px 23px 22px/23px 23px 22px 22px;
+}
+
+.friend-name {
+    vertical-align: 150%;
+    display: inline-block;
+    padding-left: 6px;
+    font-family: 'Fira Sans';
+    font-weight:500;
+	font-size: 12px;
+}
+
+li:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.fa {
+    vertical-align: 100%;
+    font-size: 17px;
+    color: #c4c4c4;
+}
+
+.friend-container-footer {
+    width: 620px;
+    min-width: 620px;
+    height: 45px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f0f0f0;
+    text-align: right;
+}
+
+#btnSave {
+    margin-top: 9px;
+    margin-right: 7px;
+    font-family: 'Fira Sans';
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+    width: 87px;
+    height: 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #ff8663;
+    border: 1px solid #ff8663;
 }

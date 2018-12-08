@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <title>{{htmlWebpackPlugin.options.title}}</title>
     <script src="https://vk.com/js/api/openapi.js?159" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div id="friends-container">
-        {{> './src/templates/friends-templates.hbs'}}
-        <div id="friends-container-left">
-            <ul class="list-friends-left"></ul>
-            </ul>
+        <img src="src\img\frined-img.png" alt="" id="friend-img">
+        <div class="head">
+            <div class="divheight"></div>
+            <div class="head-left">Выбирете друзей</div>
+            <div class="head-right">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
         </div>
-        <div id="friends-container-rigth">
-            <ul class="list-friends-rigth"></ul>
-            </ul>
+        {{> './src/templates/friends-templates.hbs'}}
+        <div class="friend-container-footer">
+            <button id='btnSave'>Сохранить</button>
         </div>
     </div>
 </body>

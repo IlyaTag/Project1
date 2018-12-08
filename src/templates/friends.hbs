@@ -1,8 +1,13 @@
 {{#each items}}
-    <li class="friends-items">
-        <img src="{{photo_50}}" alt="" class="friend-foto">
+    <li class="friends-items" draggable="true">
+        <div class="friends-items-left">
+            <img src="{{photo_100}}" alt="" draggable="false" class="friend-foto">
         <div class="friend-name">
             {{first_name}} {{last_name}}
+        </div>
+        </div>
+        <div class="friends-items-right">
+            <i class="fa fa-plus" aria-hidden="true"></i>
         </div>
     </li>
 {{/each}}

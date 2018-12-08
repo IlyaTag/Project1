@@ -1,9 +1,10 @@
+import render from '../templates/friends.hbs';
 
 VK.init({
     apiId: 6763941
 });
 
-function apiFn() {
+function api() {
     // eslint-disable-next-line no-undef
     function auth() {
         return new Promise((resolve, reject)=>{
@@ -35,9 +36,9 @@ function apiFn() {
     }
 
     let method = 'friends.get',
-        params = { order: 'name', count: 15, name_case: 'gen', fields: 'city, photo_50' };
+        params = { order: 'name', count: 15, name_case: 'gen', fields: 'city, photo_100' };
 
-    auth()
+    auth() 
         .then( ()=> {
             return callA( method, params);
         })
@@ -51,3 +52,6 @@ function apiFn() {
 
 }
 
+export {
+    api
+}
