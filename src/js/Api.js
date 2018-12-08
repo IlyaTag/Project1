@@ -36,7 +36,7 @@ function api() {
     }
 
     let method = 'friends.get',
-        params = { order: 'name', count: 15, name_case: 'gen', fields: 'city, photo_100' };
+        params = { order: 'name', name_case: 'gen', fields: 'city, photo_50' };
 
     auth() 
         .then( ()=> {
