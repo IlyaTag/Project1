@@ -18,7 +18,6 @@ function dnd() {
 
     yourFrList.addEventListener('dragstart', e => {
         // eslint-disable-next-line no-console
-        console.log(e);
         const id = 'id' + Math.round(Math.random() * 100);
 
         e.target.id = id;
@@ -55,7 +54,6 @@ function dnd() {
 
     friendsInList.addEventListener('dragstart', e => {
         // eslint-disable-next-line no-console
-        console.log(e);
         const id = 'id' + Math.round(Math.random() * 300);
 
         e.target.id = id;
