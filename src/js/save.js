@@ -6,6 +6,7 @@ function save() {
     btnSave.addEventListener('click', () => {
         localStorage.setItem('left', friendListLeft.innerHTML);
         localStorage.setItem('right', friendListRight.innerHTML);
+        alert('Списки сохранены.');
     })
 }
 
