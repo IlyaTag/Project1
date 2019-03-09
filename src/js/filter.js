@@ -1,5 +1,5 @@
 function filter() {
-    const inLeft = document.querySelector('.input-left-text'),
+    var inLeft = document.querySelector('.input-left-text'),
         inRight = document.querySelector('.input-right-text'),
         yourFrList = document.querySelector('.list-friends-left'),
         friendsInList = document.querySelector('.list-friends-right');
@@ -13,7 +13,9 @@ function filter() {
     }
 
     inLeft.addEventListener('keyup', () => {
-        for (const friend of yourFrList.children) {
+        // eslint-disable-next-line guard-for-in
+        for (const friend of Array.from(yourFrList.children)) {
+
             if (!isMatching(friend.querySelector('.friend-name').textContent.trim(), inLeft.value)) {
 
                 friend.style.display = 'none';
@@ -26,7 +28,7 @@ function filter() {
     })
 
     inRight.addEventListener('keyup', () => {
-        for (const friend of friendsInList.children) {
+        for (const friend of Array.from(friendsInList.children)) {
             if (!isMatching(friend.querySelector('.friend-name').textContent.trim(), inRight.value)) {
 
                 friend.style.display = 'none';

@@ -18,17 +18,18 @@ function fnAddRemove() {
     // - for filter 1 end
 
     friendsContainer.addEventListener('click', e => {
-        if (e.path[0].classList[0] === 'fa' && e.path[1].className !== 'head-right') {
+
+        if (e.srcElement.classList[0] === 'fa' && e.srcElement.parentElement.className !== 'head-right') {
             const elem = document.createElement('li');
 
             elem.className = 'friends-items';
 
-            if (e.path[0].classList[1] === 'fa-plus') {
+            if (e.srcElement.classList[1] === 'fa-plus') {
                 elem.draggable = 'true';
-                e.path[0].className = 'fa fa-times';
-                elem.innerHTML = e.path[0].parentNode.parentNode.innerHTML;
+                e.srcElement.className = 'fa fa-times';
+                elem.innerHTML = e.srcElement.parentNode.parentNode.innerHTML;
                 friendsInList.appendChild(elem);
-                yourFrList.removeChild(e.path[0].parentNode.parentNode);
+                yourFrList.removeChild(e.srcElement.parentNode.parentNode);
                 // - for filter 2 start
 
                 if (!isMatching(elem.querySelector('.friend-name').textContent.trim(), inRight.value)) {
@@ -41,12 +42,12 @@ function fnAddRemove() {
 
                 // - for filter 2 end
             } else {
-                if (e.path[0].classList[1] === 'fa-times') {
+                if (e.srcElement.classList[1] === 'fa-times') {
                     elem.draggable = 'true';
-                    e.path[0].className = 'fa fa-plus';
-                    elem.innerHTML = e.path[0].parentNode.parentNode.innerHTML;
+                    e.srcElement.className = 'fa fa-plus';
+                    elem.innerHTML = e.srcElement.parentNode.parentNode.innerHTML;
                     yourFrList.appendChild(elem);
-                    friendsInList.removeChild(e.path[0].parentNode.parentNode);
+                    friendsInList.removeChild(e.srcElement.parentNode.parentNode);
                     // - for filter 3 start
 
                     if (!isMatching(elem.querySelector('.friend-name').textContent.trim(), inLeft.value)) {

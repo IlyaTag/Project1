@@ -1,32 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,600,600i,700,700i');
-
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,600,600i,700,700i&subset=cyrillic);
 body,
-ul,
 div,
-li,
 img,
-input {
+input,
+li,
+ul {
     padding: 0;
-    margin: 0;
-}     
-    
-body{
-    background-color: #999999;
+    margin: 0
 }
 
-ul{
-    list-style:none;
+body {
+    background-color: #999
 }
+
+ul {
+    margin-top: 32px;
+    list-style: none
+}
+
 #friends-container {
     min-width: 620px;
     width: 620px;
-    margin: auto;
-    margin-top: 9%;
+    margin: 9% auto auto
 }
 
 #friend-img {
     margin-left: 40%;
-    margin-bottom: 21px;
+    margin-bottom: 21px
 }
 
 .head {
@@ -39,37 +39,38 @@ ul{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: #ff8663;
-    height: 45px;
+    height: 45px
 }
 
-.head-left, .head-right {
+.head-left,
+.head-right {
     position: inherit;
     display: inline-block;
-    min-width: 48%;
+    min-width: 48%
 }
 
-.divheight{
+.divheight {
     height: inherit;
-    display: inline-block;
+    display: inline-block
 }
 
 .head-left {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 500;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 14px;
     color: #fff;
-    vertical-align: 100%;
-    
+    vertical-align: 100%
 }
 
 .head-right {
-    text-align: right;
+    text-align: right
 }
 
-.head-right .fa-times{
+.head-right .fa-times {
     font-size: 17px;
-    color:#fff;
+    color: #fff
 }
 
 .input {
@@ -77,103 +78,108 @@ ul{
     min-width: 620px;
     width: 620px;
     height: 45px;
-    background-color: #f0f0f0;
-    
+    background-color: #f0f0f0
 }
 
 .input-left,
 .input-right {
     position: relative;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-top: 7px;
-    padding-left:7px;
+    padding-left: 7px;
     position: inherit;
     display: inline-block;
-    min-width: 48%;
+    min-width: 48%
 }
 
-.input-left .fa-search, .input-right .fa-search {
+.input-left .fa-search,
+.input-right .fa-search {
     position: absolute;
     top: 13px;
-    left: 15px;
+    left: 15px
 }
 
 input[type=text] {
     width: 285px;
-	height: 26px;
-	-webkit-border-radius: 13px;
-	-moz-border-radius: 13px;
+    height: 26px;
     border-radius: 13px;
-    box-sizing: border-box;
     padding-left: 28px;
-    border: 1px solid white;
-    background-color: #fff;
+    border: 1px solid #fff;
     font-family: 'Fira Sans';
-    font-weight:300;
-	font-size: 12px;
+    font-weight: 300;
+    font-size: 12px;
     color: #9f9f9f;
-    outline: none;
+    outline: none
+}
+
+#friends-container-left,
+#friends-container-right,
+input[type=text] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff
 }
 
 #friends-container-left,
 #friends-container-right {
-    box-sizing: border-box;
     min-width: 310px;
     width: 310px;
     min-height: 324px;
     height: 324px;
-    overflow-x:hidden;
+    overflow-x: hidden;
     overflow-y: auto;
-    list-style-type: none;
-    background-color: #fff;
+    list-style-type: none
 }
 
 #friends-container-left {
-    float: left;
+    float: left
 }
 
 .friends-items-left {
     display: inline-block;
     min-width: 78%;
-    width: 78%;
+    width: 78%
 }
 
 .friends-items-right {
     display: inline-block;
     min-width: 19%;
     width: 19%;
-    text-align: right;
+    text-align: right
 }
 
-.fr-Text{
+.fr-Text {
     height: 30px;
-    min-width: 279px;
-    width: 279px;
     font-family: 'Fira Sans';
     font-size: 12px;
-    font-weight:500;
+    font-weight: 500;
     color: #4f4f4f;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-top: 10px;
-    margin-left: 15px;
     vertical-align: top;
-    border-bottom: 1px solid #f0f0f0;
+    position: absolute;
+    background-color: #fff
 }
 
-.friends-items{
+.fr-Text,
+.friends-items {
     min-width: 279px;
     width: 279px;
-    border-bottom: 1px solid #f0f0f0;
     margin-left: 15px;
-
+    border-bottom: 1px solid #f0f0f0
 }
 
-.friends-items-left img{
+#btnSave:hover,
+.friends-items:hover {
+    cursor: pointer
+}
+
+.friends-items-left img {
     width: auto;
     max-width: 100%;
-	-webkit-border-radius: 22px 23px 23px 22px/23px 23px 22px 22px;
-	-moz-border-radius: 22px 23px 23px 22px/23px 23px 22px 22px;
-	border-radius: 22px 23px 23px 22px/23px 23px 22px 22px;
+    border-radius: 22px 23px 23px 22px/23px 23px 22px 22px
 }
 
 .friend-name {
@@ -181,18 +187,18 @@ input[type=text] {
     display: inline-block;
     padding-left: 6px;
     font-family: 'Fira Sans';
-    font-weight:500;
-	font-size: 12px;
+    font-weight: 500;
+    font-size: 12px
 }
 
 li:hover {
-    background-color: rgb(235, 235, 235);
+    background-color: #ebebeb
 }
 
 .fa {
     vertical-align: 100%;
     font-size: 17px;
-    color: #c4c4c4;
+    color: #c4c4c4
 }
 
 .friend-container-footer {
@@ -206,7 +212,7 @@ li:hover {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #f0f0f0;
-    text-align: right;
+    text-align: right
 }
 
 #btnSave {
@@ -218,9 +224,23 @@ li:hover {
     color: #fff;
     width: 87px;
     height: 30px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
     background-color: #ff8663;
-    border: 1px solid #ff8663;
+    border: 1px solid #ff8663
+}
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #9f9f9f;
 }
